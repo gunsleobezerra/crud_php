@@ -2,6 +2,7 @@ h1.titulo{
     font-size: 1.5vh;
     margin: 10px;
     
+    
    
 }
 
@@ -9,12 +10,21 @@ h1.titulo{
     font-size: 1.5vh;
     margin: 10px;
     text-align: justify;
-    background-color: rgb(106, 180, 209);
+    background-color: rgb(17, 169, 207);
+    border-radius: 10px;
+    
 }
 
 .table{
     font-size: 1.5vh;
     padding: 10px;
     text-align: justify;
-    background-color: rgb(106, 180, 209);
+    
+    
+    
+}
+.table td{
+    padding: 10px;
+    text-align: justify;
+    
 }

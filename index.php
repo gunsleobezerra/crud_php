@@ -1,33 +1,12 @@
 <?php
 //run the connection script
 require_once "db.php";
-
-//query the database
-
-
+$title_page = "Clientes";
+include 'header.php';
 
 
 ?>
-<!DOCTYPE html>
-<html lang="pt-br">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/mystyle.css">
-
-
-
-    <!-- Bootstrap CSS on assets -->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-
-    <!-- Bootstrap JS on assets -->
-    <script src="assets/js/bootstrap.min.js"></script>
-
-
-    <title>Clientes</title>
-</head>
 
 <body>
 
@@ -39,13 +18,15 @@ require_once "db.php";
             </div>
             <div class="col">
                 <h1 class="titulo">Cadastro de Clientes Contatos</h1>
-
-
             </div>
             <div class="col">
 
             </div>
         </div>
+
+
+
+
     </div>
 
 
@@ -72,7 +53,7 @@ require_once "db.php";
 
     ?>
 
-    <table id="example" class="table table-bordered" >
+    <table id="tab_clientes" class="table table-bordered">
         <thead>
             <tr>
 
@@ -83,6 +64,7 @@ require_once "db.php";
                 <th>Data de Inclusão</th>
                 <th>Nº Contatos</th>
                 <th>Editar</th>
+
 
             </tr>
         </thead>
@@ -100,9 +82,8 @@ require_once "db.php";
                 echo "<td>" . $cliente['nome_fantasia'] . "</td>";
                 echo "<td>{$data}</td>";
                 echo "<td>" . $quant_contatos[$cliente['cod_cliente']][1] . "</td>";
-                echo "<td><a href='editar.php?cod_cliente=" . $cliente['cod_cliente'] . "'>Editar</a></td></tr>";
-
-
+                echo "<td><a href='editar.php?cod_cliente=" . $cliente['cod_cliente'] . "'>Editar</a>";
+                echo "<a href='excluir.php?cod_cliente=" . $cliente['cod_cliente'] . "'>Excluir</a></td></tr>";
             }
             ?>
 
@@ -110,6 +91,20 @@ require_once "db.php";
         </tbody>
 
     </table>
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <a href="cadastro.php"><button type="button" data-toggle="modal" class="btn btn-secondary btn-sm" data-target="#cadastro_modal">Novo</button></a>
+
+            </div>
+        </div>
+
+
+
+
+       
+
 
 
 </body>
